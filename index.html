@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <!-- SEO BÁSICO -->
+  <meta charset="UTF-8">
+  <title>Consultoria Online | Personal Trainer com +25 anos de Experiência</title>
+  <meta name="description" content="Consultoria online personalizada com personal trainer experiente. Treinos sob medida, acompanhamento real e resultados. Apenas R$ 99,90/mês.">
+  <meta name="keywords" content="consultoria online, personal trainer online, treino personalizado, emagrecimento, hipertrofia">
+  <meta name="author" content="Personal Trainer">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Consultoria Online com Personal Trainer">
+  <meta property="og:description" content="Treinos personalizados e acompanhamento profissional por R$ 99,90/mês.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558611848-73f7eb4001a1">
+  <meta property="og:type" content="website">
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --dark:#020617;
+      --dark-soft:#020617ee;
+      --green:#22c55e;
+      --green-neon:#4ade80;
+      --purple:#7c3aed;
+      --gray:#94a3b8;
+      --light:#f8fafc;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Montserrat',sans-serif;
+    }
+
+    body{
+      background:var(--light);
+      color:#334155;
+      line-height:1.75;
+    }
+
+    section{
+      padding:50px 20px;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* ===== HERO ===== */
+    header{
+      min-height:100vh;
+      background:
+        radial-gradient(circle at top right,#22c55e33,transparent 60%),
+        radial-gradient(circle at bottom left,#7c3aed33,transparent 60%),
+        linear-gradient(var(--dark-soft),var(--dark-soft)),
+        url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1") center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:120px 20px;
+      color:var(--light);
+    }
+
+    header h1{
+      font-size:3.8rem;
+      font-weight:900;
+      line-height:1.1;
+    }
+
+    header h1 span{
+      color:var(--green-neon);
+    }
+
+    header p{
+      font-size:1.3rem;
+      max-width:720px;
+      margin:30px auto;
+      color:var(--gray);
+    }
+
+    /* ===== TITULOS ===== */
+    h2{
+      font-size:2.6rem;
+      color:#020617;
+      margin-bottom:25px;
+      text-align:center;
+      position:relative;
+    }
+
+    h2::after{
+      content:"";
+      display:block;
+      width:80px;
+      height:4px;
+      margin:16px auto 0;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--green),var(--green-neon));
+    }
+
+    /* ===== CTA ===== */
+    .btn{
+      background:linear-gradient(135deg,var(--green),var(--green-neon));
+      color:#022c22;
+      padding:20px 55px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:1.15rem;
+      text-decoration:none;
+      display:inline-block;
+      transition:.3s;
+      box-shadow:0 0 40px #22c55e55;
+    }
+
+    .btn:hover{
+      transform:scale(1.08);
+      box-shadow:0 0 60px #22c55eaa;
+    }
+
+    /* ===== GRID ===== */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    /* ===== BENEFÍCIOS ===== */
+    .benefits{
+      margin-top:25px;
+    }
+
+    .benefits li{
+      list-style:none;
+      margin-bottom:10px;
+      font-size:1.05rem;
+    }
+
+    .benefits li::before{
+      content:"✔ ";
+      color:var(--green);
+      font-weight:bold;
+    }
+
+    /* ===== VÍDEO ===== */
+    iframe{
+      width:100%;
+      height:340px;
+      border-radius:20px;
+    }
+
+    /* ===== DIVISOR ===== */
+    .divider{
+      width:100%;
+      height:1px;
+      background:linear-gradient(
+        90deg,
+        transparent,
+        var(--green-neon),
+        var(--purple),
+        var(--green-neon),
+        transparent
+      );
+      margin:0 auto;
+      position:relative;
+    }
+
+    .divider::after{
+      content:"";
+      position:absolute;
+      top:-6px;
+      left:50%;
+      transform:translateX(-50%);
+      width:120px;
+      height:12px;
+      background:radial-gradient(ellipse at center,#22c55e88,transparent 70%);
+      filter:blur(6px);
+    }
+
+    /* ===== CARDS NICHOS ===== */
+    .niche-card{
+      background:white;
+      padding:40px 30px;
+      border-radius:20px;
+      box-shadow:0 15px 40px rgba(0,0,0,.08);
+      text-decoration:none;
+      color:#020617;
+      transition:.35s;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      border:2px solid transparent;
+    }
+
+    .niche-card h3{
+      font-size:1.6rem;
+      margin-bottom:15px;
+      text-align:center;
+    }
+
+    .niche-card p{
+      font-size:1.05rem;
+      color:#475569;
+      margin-bottom:25px;
+      text-align:center;
+    }
+
+    .niche-card span{
+      font-weight:800;
+      color:var(--green);
+      font-size:1.05rem;
+      align-self:center;
+    }
+
+    .niche-card:hover{
+      transform:translateY(-10px) scale(1.03);
+      box-shadow:0 25px 60px rgba(34,197,94,.25);
+      border-color:var(--green-neon);
+    }
+
+    /* ===== PREÇO ===== */
+    .price-box{
+      background:#020617;
+      color:white;
+      padding:60px 30px;
+      border-radius:30px;
+      text-align:center;
+    }
+
+
+    .price-box h2{
+      color:white;
+    }
+
+    .price{
+      font-size:3.5rem;
+      color:var(--green-neon);
+      font-weight:900;
+      margin:20px 0;
+    }
+
+    /* ===== FAQ ===== */
+    details{
+      background:white;
+      padding:5px;
+      border-radius:12px;
+      margin-bottom:5px;
+      cursor:pointer;
+    }
+
+    details summary{
+      font-weight:700;
+    }
+
+    /* ===== FAQ REFINADO ===== */
+    .faq {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 18px;
+      padding: 5px 25px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      border: 1px solid #e5e7eb;
+      transition: all .3s ease;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      padding: 22px 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      font-size: 1.6rem;
+      color: var(--green);
+      transition: transform .3s ease;
+    }
+
+    .faq-item[open] summary::after {
+      content: "–";
+    }
+
+    .faq-item p {
+      padding-bottom: 22px;
+      font-size: 1.05rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .faq-item[open] {
+      border-color: var(--green-neon);
+      box-shadow: 0 20px 45px rgba(34,197,94,.18);
+      transform: scale(1.01);
+    }
+
+    /* ===== FOOTER ===== */
+    footer{
+      background:#020617;
+      color:white;
+      text-align:center;
+      padding:30px 20px;
+      font-size:.9rem;
+      opacity:.8;
+    }
+
+    .logo{
+      display:block;
+      margin:0 auto;
+      width:100%;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div>
+    <h1>Consultoria Online com <br><span>Personal Trainer</span></h1>
+    <p>Há mais de 25 anos promovendo saúde e ajudando pessoas a superarem seus próprios limites.</p>
+    <a href="#" class="btn whatsapp-cta" data-nicho="Quero minha consultoria por R$ 99,90"> Quero minha consultoria por R$ 99,90</a>
+  </div>
+</header>
+
+<section class="grid">
+  <div>
+    <h2>Quem será seu treinador</h2>
+    <p>
+      Sou Messias Júnior, graduado em Educação Física (CREF-000706-G/RN) e especialista em Bioquímica do Exercício. Ao longo de mais de 25 anos de atuação, ajudei centenas de pessoas a transformarem o corpo, a saúde e a qualidade de vida. Esta consultoria foi criada para quem busca resultados reais, com embasamento científico, sem promessas irreais ou fórmulas milagrosas.
+    </p>
+    <ul class="benefits">
+      <li>Acompanhamento profissional contínuo</li>
+      <li>Treinos personalizados conforme seu objetivo</li>
+      <li>Planos adaptados à sua rotina</li>
+      <li>Suporte direto via WhatsApp</li>
+      <li>Método validado por mais de 25 anos de experiência</li>
+    </ul>
+  </div>
+
+  <div>
+    <img src="jf.png" class="logo">
+  </div>
+</section>
+
+
+<div class="divider"></div>
+
+
+<section class="section-soft">
+  <h2>O que você vai conquistar</h2>
+  <div class="grid">
+    <img src="logo-jf-consultoria-esportiva.png" class="logo">
+    <ul class="benefits">
+      <li>Mais disposição e energia no dia a dia</li>
+      <li>Redução de gordura corporal</li>
+      <li>Ganho de força e massa muscular</li>
+      <li>Mais confiança com o próprio corpo</li>
+      <li>Disciplina e constância</li>
+      <li>Menos dores e mais mobilidade</li>
+      <li>Resultados reais e sustentáveis</li>
+    </ul>
+    
+  </div>
+</section>
+
+
+<div class="divider"></div>
+
+
+<section>
+  <h2>Para quem é a consultoria</h2>
+  <div class="grid">
+    <a class="niche-card whatsapp-cta" href="#" data-nicho="Emagrecimento Saudável">
+      <h3>Emagrecimento Saudável</h3>
+      <p>Para quem quer perder gordura com saúde e consistência.</p>
+      <span>Quero emagrecer →</span>
+    </a>
+
+    <a class="niche-card whatsapp-cta" href="#" data-nicho="Ganho de Massa Muscular">
+      <h3>Ganho de Massa Muscular</h3>
+      <p>Treinos estratégicos para força, volume e evolução contínua.</p>
+      <span>Quero ganhar massa →</span>
+    </a>
+
+    <a class="niche-card whatsapp-cta" href="#" data-nicho="Saúde e Qualidade de Vida">
+      <h3>Saúde & Qualidade de Vida</h3>
+      <p>Ideal para quem busca longevidade, bem-estar e disposição.</p>
+      <span>Quero mais saúde →</span>
+    </a>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="price-box">
+    <h2>Comece hoje mesmo</h2>
+    <p class="price">R$ 99,90/mês</p>
+    <p>Sem fidelidade • Cancele quando quiser</p><br>
+    <a id="contato" href="#" class="btn whatsapp-cta" data-nicho="Quero começar hoje mesmo">Falar no WhatsApp</a>
+  </div>
+</section>
+
+
+
+<section class="faq">
+  <h2>Dúvidas Frequentes</h2>
+
+  <details class="faq-item">
+    <summary>O treino é para iniciantes?</summary>
+    <p>Sim. O plano é totalmente adaptado para qualquer nível, do iniciante absoluto ao avançado.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Preciso ir à academia?</summary>
+    <p>Não. Os treinos podem ser feitos em casa ou na academia, de acordo com sua realidade e equipamentos disponíveis.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Essa consultoria serve para quem quer emagrecer?</summary>
+    <p>Sim. Os treinos são planejados para aumentar o gasto calórico, preservar massa muscular e acelerar o emagrecimento de forma saudável.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Consigo ganhar massa muscular com consultoria online?</summary>
+    <p>Sim. O plano de treino é estruturado com progressões, ajustes de carga e estratégias focadas em hipertrofia, mesmo à distância.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Tenho dores ou limitações físicas. Posso treinar?</summary>
+    <p>Sim. O treino é adaptado respeitando dores, limitações articulares ou histórico de lesões.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Quanto tempo leva para começar a ver resultados?</summary>
+    <p>Os primeiros ganhos de disposição e bem-estar surgem nas primeiras semanas. Resultados físicos variam conforme frequência, alimentação e dedicação.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Vou ter acompanhamento ou é só uma ficha de treino?</summary>
+    <p>Você terá acompanhamento profissional, com ajustes periódicos e suporte direto via WhatsApp.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Preciso seguir dieta?</summary>
+    <p>A consultoria é focada no treino. Caso necessário, você receberá orientações gerais e será indicado acompanhamento nutricional.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Tenho pouco tempo para treinar. Funciona?</summary>
+    <p>Sim. Os treinos são planejados para caber na sua rotina, mesmo com pouco tempo disponível.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>Posso cancelar quando quiser?</summary>
+    <p>Sim. A assinatura é mensal, sem fidelidade. Você pode cancelar quando desejar.</p>
+  </details>
+</section>
+
+
+
+<footer>
+  <p>© 2026 • Consultoria Online • Todos os direitos reservados</p>
+</footer>
+
+
+
+<script>
+  const phone = "5599999999999";
+
+  document.querySelectorAll(".whatsapp-cta").forEach(card => {
+    card.addEventListener("click", e => {
+      e.preventDefault();
+      const nicho = card.dataset.nicho;
+      const msg = `Olá! Tenho interesse na consultoria de ${nicho}. Gostaria de mais informações.`;
+      const url = `https://wa.me/${phone}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank");
+    });
+  });
+</script>
+
+
+
+</body>
+</html>
